@@ -20,11 +20,14 @@
 				var curr_unix = moment().unix();
 
 				// Sample data: SOCI90003 Comparative Social PolicyUniversity Gadjah Mada, Jogjakarta, Indonesia
-				var subject_code = $(this).prev().prev().text().match(/(^.+\d{5})/)[1];
+				var subject_code = $(this).prev().prev().text().match(/(^\w+\d{5})/)[1];
 
+				/*
 				console.log('-s-');
+				console.log($(this).prev().prev().text());
 				console.log(subject_code);
 				console.log('-e-');
+				*/
 
 				if(date_unix < curr_unix) {
 					// Note: people may want to custom this text in the future.
